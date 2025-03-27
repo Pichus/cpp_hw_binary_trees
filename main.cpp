@@ -9,7 +9,7 @@
 //  3   7 12  18
 
 int main() {
-    BinaryTree* bintree = new BinaryTree();
+    BinaryTree *bintree = new BinaryTree();
 
     for (auto it = bintree->begin(); it != bintree->end(); ++it) {
         std::cout << *it << std::endl;
@@ -18,7 +18,7 @@ int main() {
     std::cout << "---------------------" << std::endl;
 
     bintree->inorderTraversalPrint();
-    
+
     delete bintree;
     return 0;
 }

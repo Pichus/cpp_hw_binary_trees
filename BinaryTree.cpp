@@ -25,12 +25,12 @@ int BinaryTree::inOrderIterator::operator*() const {
     return nodes.top()->value;
 }
 
-BinaryTree::inOrderIterator & BinaryTree::inOrderIterator::operator++() {
+BinaryTree::inOrderIterator &BinaryTree::inOrderIterator::operator++() {
     if (nodes.empty()) return *this;
-    
+
     auto top = nodes.top();
     nodes.pop();
-    Node* temp = top->right;
+    Node *temp = top->right;
 
     while (temp != nullptr) {
         nodes.push(temp);
@@ -40,7 +40,7 @@ BinaryTree::inOrderIterator & BinaryTree::inOrderIterator::operator++() {
     return *this;
 }
 
-BinaryTree::Node * BinaryTree::copyTree(const Node *root) {
+BinaryTree::Node *BinaryTree::copyTree(const Node *root) {
     if (root == nullptr) {
         return nullptr;
     }
