@@ -1,7 +1,3 @@
-//
-// Created by dimat on 3/25/2025.
-//
-
 #include "BinaryTree.h"
 
 #include <iostream>
