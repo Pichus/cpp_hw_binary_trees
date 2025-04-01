@@ -62,5 +62,7 @@ public:
     inOrderIterator end();
 };
 
+bool isBST(BinaryTree &tree);
+
 
 #endif //BINARYTREE_H

@@ -134,4 +134,14 @@ BinaryTree::inOrderIterator BinaryTree::end() {
     return endIterator;
 }
 
+bool isBST(BinaryTree &tree) {
+    int prevValue = *tree.begin();
+    for (auto it = ++tree.begin(); it != tree.end(); ++it) {
+        if (prevValue >= *it) {
+            return false;
+        }
+        prevValue = *it;
+    }
 
+    return true;
+}
